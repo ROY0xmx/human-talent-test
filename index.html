@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6c63ff">
+  <title>人类十大天赋自测</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main class="app">
+    <header class="topbar">
+      <button class="brand" id="homeBtn" type="button" aria-label="返回首页">
+        <span class="brand-mark">✦</span>
+        <span>天赋小实验室</span>
+      </button>
+      <nav class="top-actions" aria-label="页面操作">
+        <button class="icon-btn" id="historyBtn" type="button">历史</button>
+        <button class="icon-btn round" id="themeBtn" type="button" aria-label="切换主题">☾</button>
+      </nav>
+    </header>
+
+    <section class="card screen active" id="homeScreen">
+      <div class="hero">
+        <span class="eyebrow">✨ 发现你与众不同的闪光点</span>
+        <h1>人类十大天赋自测</h1>
+        <p>用轻松的问题认识你的天赋组合，并查看更适合尝试的行业方向与发展方法。</p>
+        <span class="privacy">🔒 仅保存在此设备</span>
+      </div>
+
+      <div class="talent-preview" aria-label="十项天赋">
+        <span>💡 创意</span><span>🧭 洞察</span><span>🤝 共情</span><span>⚡ 行动</span><span>🌱 学习</span>
+      </div>
+
+      <div class="version-grid" id="versionGrid" aria-label="选择测评长度">
+        <button class="version-card" type="button" data-version="40"><span class="version-icon">🌤️</span><strong>40题</strong><span>约 3 分钟</span></button>
+        <button class="version-card selected" type="button" data-version="100"><span class="popular">推荐</span><span class="version-icon">🌈</span><strong>100题</strong><span>约 8 分钟</span></button>
+        <button class="version-card" type="button" data-version="200"><span class="version-icon">🚀</span><strong>200题</strong><span>约 15 分钟</span></button>
+      </div>
+
+      <div class="start-wrap"><button class="primary-btn start-btn" id="startBtn" type="button"><span>开始探索</span><span>→</span></button></div>
+    </section>
+
+    <section class="card screen" id="testScreen">
+      <div class="progress-row"><div class="progress-track"><div class="progress-bar" id="progressBar"></div></div><div class="progress-text" id="progressText">1 / 100</div></div>
+      <span class="question-kicker" id="questionKicker">正在发现你的天赋</span>
+      <h2 class="question" id="questionText"></h2>
+      <div class="options" id="options"></div>
+      <div class="test-actions"><button class="secondary-btn" id="prevBtn" type="button">← 上一题</button><button class="primary-btn" id="nextBtn" type="button" disabled>下一题 →</button></div>
+    </section>
+
+    <section class="card screen" id="reportScreen">
+      <div id="reportContent"></div>
+      <div class="report-actions"><button class="primary-btn" id="restartBtn" type="button">再测一次</button><button class="secondary-btn" id="reportHistoryBtn" type="button">查看历史</button></div>
+    </section>
+
+    <section class="card screen" id="historyScreen">
+      <div class="history-head"><span class="eyebrow">我的成长轨迹</span><h1>测试历史</h1></div>
+      <div class="history-list" id="historyList"></div>
+      <button class="secondary-btn" id="clearHistoryBtn" type="button">清除全部历史</button>
+    </section>
+  </main>
+
+  <script src="talents.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
