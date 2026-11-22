@@ -3,62 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#6c63ff">
+  <meta name="theme-color" content="#fff8ed">
+  <meta name="description" content="通过轻松友好的自测，发现你的十项天赋与闪光点。">
   <title>人类十大天赋自测</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="ambient ambient-one"></div>
-  <div class="ambient ambient-two"></div>
-
+  <div class="paper-grain" aria-hidden="true"></div>
   <main class="app">
     <header class="topbar">
       <button class="brand" id="homeBtn" type="button" aria-label="返回首页">
-        <span class="brand-mark">✦</span>
+        <span class="brand-mark" aria-hidden="true">✳</span>
         <span>天赋小实验室</span>
       </button>
       <nav class="top-actions" aria-label="页面操作">
-        <button class="icon-btn" id="historyBtn" type="button">历史</button>
+        <button class="icon-btn" id="historyBtn" type="button">测试记录</button>
         <button class="icon-btn round" id="themeBtn" type="button" aria-label="切换主题">☾</button>
       </nav>
     </header>
 
-    <section class="card screen active" id="homeScreen">
+    <section class="screen active" id="homeScreen">
       <div class="hero">
-        <span class="eyebrow">✨ 发现你与众不同的闪光点</span>
+        <span class="eyebrow"><span class="eyebrow-star">✦</span> 一次轻松的自我探索</span>
         <h1>人类十大天赋自测</h1>
-        <p>用轻松的问题认识你的天赋组合，并查看更适合尝试的行业方向与发展方法。</p>
-        <span class="privacy">🔒 仅保存在此设备</span>
+        <p>每题 5 个选项，选最像你的那个<br class="desktop-break">做完翻到计分表对答案</p>
       </div>
 
-      <div class="talent-preview" aria-label="十项天赋">
-        <span>💡 创意</span><span>🧭 洞察</span><span>🤝 共情</span><span>⚡ 行动</span><span>🌱 学习</span>
+      <div class="talent-grid" aria-label="人类十大天赋">
+        <article class="talent-tile coral"><span class="tile-icon" aria-hidden="true">▤</span><span>语言</span></article>
+        <article class="talent-tile blue"><span class="tile-icon" aria-hidden="true">▧</span><span>逻辑</span></article>
+        <article class="talent-tile violet"><span class="tile-icon" aria-hidden="true">◆</span><span>空间</span></article>
+        <article class="talent-tile pink"><span class="tile-icon" aria-hidden="true">♫</span><span>音乐</span></article>
+        <article class="talent-tile amber"><span class="tile-icon" aria-hidden="true">♟</span><span>身体</span></article>
+        <article class="talent-tile teal"><span class="tile-icon" aria-hidden="true">♧</span><span>人际</span></article>
+        <article class="talent-tile orange"><span class="tile-icon" aria-hidden="true">◉</span><span>内省</span></article>
+        <article class="talent-tile green"><span class="tile-icon" aria-hidden="true">♧</span><span>自然</span></article>
+        <article class="talent-tile lime"><span class="tile-icon" aria-hidden="true">♙</span><span>创造</span></article>
+        <article class="talent-tile mauve"><span class="tile-icon" aria-hidden="true">●</span><span>美学</span></article>
       </div>
+      <p class="talent-caption">最后看看你的天赋解析</p>
 
-      <div class="version-grid" id="versionGrid" aria-label="选择测评长度">
-        <button class="version-card" type="button" data-version="40"><span class="version-icon">🌤️</span><strong>40题</strong><span>约 3 分钟</span></button>
-        <button class="version-card selected" type="button" data-version="100"><span class="popular">推荐</span><span class="version-icon">🌈</span><strong>100题</strong><span>约 8 分钟</span></button>
-        <button class="version-card" type="button" data-version="200"><span class="version-icon">🚀</span><strong>200题</strong><span>约 15 分钟</span></button>
+      <div class="home-controls">
+        <div class="version-grid" id="versionGrid" aria-label="选择测评长度">
+          <button class="version-card" type="button" data-version="40"><strong>40 题</strong><span>轻松体验</span></button>
+          <button class="version-card selected" type="button" data-version="100"><span class="popular">推荐</span><strong>100 题</strong><span>标准测评</span></button>
+          <button class="version-card" type="button" data-version="200"><strong>200 题</strong><span>深度探索</span></button>
+        </div>
+        <div class="start-wrap"><button class="primary-btn start-btn" id="startBtn" type="button"><span>开始测试</span><span aria-hidden="true">→</span></button></div>
+        <span class="privacy"><span aria-hidden="true">⌑</span> 测试记录仅保存在此设备</span>
       </div>
-
-      <div class="start-wrap"><button class="primary-btn start-btn" id="startBtn" type="button"><span>开始探索</span><span>→</span></button></div>
+      <div class="page-dots" aria-hidden="true"><i class="current"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
     </section>
 
-    <section class="card screen" id="testScreen">
+    <section class="screen quiz-screen" id="testScreen">
+      <div class="quiz-heading"><span class="eyebrow"><span class="eyebrow-star">✦</span> 跟随直觉，选择最像你的答案</span><button class="back-home" id="quizHomeBtn" type="button">返回首页</button></div>
       <div class="progress-row"><div class="progress-track"><div class="progress-bar" id="progressBar"></div></div><div class="progress-text" id="progressText">1 / 100</div></div>
       <span class="question-kicker" id="questionKicker">正在发现你的天赋</span>
       <h2 class="question" id="questionText"></h2>
+      <div class="answer-hint">请选择最符合你真实状态的一项</div>
       <div class="options" id="options"></div>
       <div class="test-actions"><button class="secondary-btn" id="prevBtn" type="button">← 上一题</button><button class="primary-btn" id="nextBtn" type="button" disabled>下一题 →</button></div>
     </section>
 
-    <section class="card screen" id="reportScreen">
+    <section class="screen report-screen" id="reportScreen">
       <div id="reportContent"></div>
       <div class="report-actions"><button class="primary-btn" id="restartBtn" type="button">再测一次</button><button class="secondary-btn" id="reportHistoryBtn" type="button">查看历史</button></div>
     </section>
 
-    <section class="card screen" id="historyScreen">
-      <div class="history-head"><span class="eyebrow">我的成长轨迹</span><h1>测试历史</h1></div>
+    <section class="screen history-screen" id="historyScreen">
+      <div class="history-head"><span class="eyebrow"><span class="eyebrow-star">✦</span> 我的成长轨迹</span><h1>测试历史</h1><p>每一次探索，都是更了解自己的一步。</p></div>
       <div class="history-list" id="historyList"></div>
       <button class="secondary-btn" id="clearHistoryBtn" type="button">清除全部历史</button>
     </section>
@@ -66,5 +79,8 @@
 
   <script src="talents.js"></script>
   <script src="app.js"></script>
+  <script>
+    document.getElementById('quizHomeBtn').addEventListener('click', () => document.getElementById('homeBtn').click());
+  </script>
 </body>
 </html>
