@@ -8,6 +8,14 @@
   <title>人类十大天赋自测 · 天赋小实验室</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="icon-refinement.css">
+  <style>
+    .quick-start-wrap{width:min(100%,720px);margin:24px auto 0;text-align:center}
+    .quick-start-btn{width:100%;min-height:62px;padding:0 24px;display:flex;align-items:center;justify-content:center;gap:12px;border:0;border-radius:18px;background:linear-gradient(100deg,#e77b67,#ee9a78);color:#fff;font:inherit;font-size:19px;font-weight:800;box-shadow:0 10px 24px rgba(231,123,103,.25);cursor:pointer;transition:transform .18s,box-shadow .18s}
+    .quick-start-btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(231,123,103,.3)}
+    .quick-start-btn:focus-visible{outline:3px solid #d88c6a;outline-offset:4px}
+    .quick-start-note{display:block;margin-top:8px;color:var(--muted);font-size:12px}
+    @media(max-width:600px){.quick-start-wrap{margin-top:18px}.quick-start-btn{min-height:58px;font-size:17px}}
+  </style>
 </head>
 <body>
   <main class="app">
@@ -26,23 +34,27 @@
         <p>没有标准答案，选择最像真实自己的选项。<br class="desktop-break">看见优势，也发现下一步可以发展的方向。</p>
       </div>
       <div class="talent-grid" aria-label="人类十大天赋">
-        <article class="talent-tile coral"><span class="tile-icon">▤</span><span>语言</span></article>
-        <article class="talent-tile blue"><span class="tile-icon">▧</span><span>逻辑</span></article>
-        <article class="talent-tile violet"><span class="tile-icon">◆</span><span>空间</span></article>
-        <article class="talent-tile pink"><span class="tile-icon">♫</span><span>音乐</span></article>
-        <article class="talent-tile amber"><span class="tile-icon">♟</span><span>身体</span></article>
-        <article class="talent-tile teal"><span class="tile-icon">♧</span><span>人际</span></article>
-        <article class="talent-tile orange"><span class="tile-icon">◉</span><span>内省</span></article>
-        <article class="talent-tile green"><span class="tile-icon">♧</span><span>自然</span></article>
-        <article class="talent-tile lime"><span class="tile-icon">♙</span><span>创造</span></article>
-        <article class="talent-tile mauve"><span class="tile-icon">●</span><span>美学</span></article>
+        <article class="talent-tile coral"><span class="tile-icon" aria-hidden="true">▤</span><span>语言</span></article>
+        <article class="talent-tile blue"><span class="tile-icon" aria-hidden="true">▧</span><span>逻辑</span></article>
+        <article class="talent-tile violet"><span class="tile-icon" aria-hidden="true">◆</span><span>空间</span></article>
+        <article class="talent-tile pink"><span class="tile-icon" aria-hidden="true">♫</span><span>音乐</span></article>
+        <article class="talent-tile amber"><span class="tile-icon" aria-hidden="true">♟</span><span>身体</span></article>
+        <article class="talent-tile teal"><span class="tile-icon" aria-hidden="true">♧</span><span>人际</span></article>
+        <article class="talent-tile orange"><span class="tile-icon" aria-hidden="true">◉</span><span>内省</span></article>
+        <article class="talent-tile green"><span class="tile-icon" aria-hidden="true">♧</span><span>自然</span></article>
+        <article class="talent-tile lime"><span class="tile-icon" aria-hidden="true">♙</span><span>创造</span></article>
+        <article class="talent-tile mauve"><span class="tile-icon" aria-hidden="true">●</span><span>美学</span></article>
+      </div>
+      <div class="quick-start-wrap">
+        <button class="quick-start-btn" id="quickStartBtn" type="button"><span>开始测试</span><span aria-hidden="true">→</span></button>
+        <span class="quick-start-note">点击立即开始，或在下方选择题量</span>
       </div>
       <p class="talent-caption">选一套适合自己的题目，开始认识天赋</p>
       <section class="home-controls" aria-label="选择测试题量并开始">
         <div class="version-grid" id="versionGrid" aria-label="选择测评长度">
           <button class="version-card" type="button" data-version="40" aria-pressed="false"><strong>40 题</strong><span>轻松体验 · 约 5 分钟</span><small>约 1000 字解析</small></button>
           <button class="version-card selected" type="button" data-version="100" aria-pressed="true"><span class="popular">推荐</span><strong>100 题</strong><span>标准测评 · 约 12 分钟</span><small>约 4000 字解析</small></button>
-          <button class="version-card" type="button" data-version="200" aria-pressed="false"><strong>200 题</strong><span>深度探索 · 约 25 分���</span><small>约 8000 字解析</small></button>
+          <button class="version-card" type="button" data-version="200" aria-pressed="false"><strong>200 题</strong><span>深度探索 · 约 25 分钟</span><small>约 8000 字解析</small></button>
         </div>
         <button class="primary-btn start-btn" id="startBtn" type="button"><span>开始测试</span><span aria-hidden="true">→</span></button>
         <span class="privacy">⌑ 测试记录仅保存在此设备，可随时查看或清除</span>
@@ -71,5 +83,6 @@
   </main>
   <script src="talents.js"></script>
   <script src="app.js"></script>
+  <script src="start-entry.js"></script>
 </body>
 </html>
