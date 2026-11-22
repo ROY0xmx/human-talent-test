@@ -2,35 +2,44 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fffaf4">
-  <meta name="description" content="通过轻松友好的自测，发现你的十项天赋与闪光点。"><title>人类十大天赋自测</title>
-  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="icon-refinement.css">
-  <style>
-    #homeScreen{overflow:visible!important}.talent-grid{margin-bottom:0!important}.talent-start-wrap{display:block!important;position:static!important;visibility:visible!important;opacity:1!important;width:min(100%,560px)!important;height:auto!important;margin:26px auto 18px!important;padding:0!important;z-index:auto!important}.talent-start-btn{display:flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;width:100%!important;height:58px!important;min-height:58px!important;margin:0!important;padding:0 22px!important;border:0!important;border-radius:16px!important;background:#ed8069!important;color:#fff!important;font-size:18px!important;font-weight:800!important;line-height:1!important;box-shadow:0 10px 24px rgba(231,123,103,.25)!important;cursor:pointer!important}.talent-start-btn:active{transform:scale(.985)}
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fffaf5">
+  <meta name="description" content="用轻松友好的自测，发现你的十项天赋与闪光点。结果只保存在你的设备上。">
+  <title>人类十大天赋自测 · 天赋小实验室</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="app">
-    <header class="topbar"><button class="brand" id="homeBtn" type="button" aria-label="返回首页"><span class="brand-mark" aria-hidden="true">✳</span><span>天赋小实验室</span></button><nav class="top-actions"><button class="icon-btn" id="historyBtn" type="button">测试记录</button><button class="icon-btn round" id="themeBtn" type="button" aria-label="切换主题">☾</button></nav></header>
-    <section class="screen active" id="homeScreen">
-      <div class="hero"><span class="eyebrow">一次轻松的自我探索</span><h1>人类十���天赋自测</h1><p>每题 5 个选项，选最像你的那个<br class="desktop-break">做完翻到天赋解析</p></div>
-      <div class="talent-grid" aria-label="人类十大天赋">
-        <article class="talent-tile coral"><span class="tile-icon">▤</span><span>语言</span></article><article class="talent-tile blue"><span class="tile-icon">▧</span><span>逻辑</span></article><article class="talent-tile violet"><span class="tile-icon">◆</span><span>空间</span></article><article class="talent-tile pink"><span class="tile-icon">♫</span><span>音乐</span></article><article class="talent-tile amber"><span class="tile-icon">♟</span><span>身体</span></article><article class="talent-tile teal"><span class="tile-icon">♧</span><span>人际</span></article><article class="talent-tile orange"><span class="tile-icon">◉</span><span>内省</span></article><article class="talent-tile green"><span class="tile-icon">♧</span><span>自然</span></article><article class="talent-tile lime"><span class="tile-icon">♙</span><span>创造</span></article><article class="talent-tile mauve"><span class="tile-icon">●</span><span>美学</span></article>
+    <header class="topbar">
+      <button class="brand" id="homeBtn" type="button" aria-label="返回首页"><span class="brand-mark" aria-hidden="true">✳</span><span>天赋小实验室</span></button>
+      <div class="topbar-actions"><span class="privacy-mini"><span aria-hidden="true">◉</span> 仅保存在本机</span><button class="icon-btn" id="themeBtn" type="button" aria-label="切换深色模式" title="切换深色模式"><span id="themeIcon" aria-hidden="true">☾</span></button><button class="text-btn" id="historyBtn" type="button">测试记录</button></div>
+    </header>
+
+    <section class="screen active" id="homeScreen" aria-labelledby="homeTitle">
+      <div class="hero"><span class="eyebrow"><span class="sparkle">✦</span> 一次轻松的自我探索</span><h1 id="homeTitle">人类十大天赋自测</h1><p>每题 5 个选项，选最像你的那个<br class="desktop-break">没有标准答案，跟随直觉就好。</p><div class="hero-note"><span aria-hidden="true">☀</span> 认识自己的方式有很多，这只是一个温柔的开始。</div></div>
+      <div class="talent-grid" aria-label="本测试探索的十项天赋">
+        <article class="talent-tile coral"><span class="tile-icon">文</span><span>语言</span></article><article class="talent-tile blue"><span class="tile-icon">∑</span><span>逻辑</span></article><article class="talent-tile violet"><span class="tile-icon">◇</span><span>空间</span></article><article class="talent-tile pink"><span class="tile-icon">♫</span><span>音乐</span></article><article class="talent-tile amber"><span class="tile-icon">↗</span><span>身体</span></article><article class="talent-tile mint"><span class="tile-icon">♡</span><span>人际</span></article><article class="talent-tile lavender"><span class="tile-icon">◉</span><span>内省</span></article><article class="talent-tile green"><span class="tile-icon">❋</span><span>自然</span></article><article class="talent-tile peach"><span class="tile-icon">✳</span><span>创造</span></article><article class="talent-tile sky"><span class="tile-icon">✧</span><span>美学</span></article>
       </div>
-      <div class="talent-start-wrap"><button class="talent-start-btn" id="talentStartBtn" type="button"><span>开始测试</span><span aria-hidden="true">→</span></button></div>
-      <p class="talent-caption">选一套题量，认识自己的天赋</p>
-      <div class="home-controls" id="homeControls" style="display:block!important">
-        <div class="version-grid" id="versionGrid" aria-label="选择测评长度"><button class="version-card" type="button" data-version="40"><strong>40题</strong><span>轻松体验</span></button><button class="version-card selected" type="button" data-version="100"><span class="popular">推荐</span><strong>100题</strong><span>标准测评</span></button><button class="version-card" type="button" data-version="200"><strong>200题</strong><span>深度探索</span></button></div>
-        <div class="start-wrap"><button class="primary-btn start-btn" id="startBtn" type="button"><span>开始所选测试</span><span aria-hidden="true">→</span></button></div>
-        <span class="privacy">测试记录仅保存在此设备</span>
-      </div>
-      <div class="page-dots" aria-hidden="true"><i class="current"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="home-controls"><div class="section-label"><span>选择测评长度</span><span>随时可以暂停，下次接着答</span></div><div class="version-grid" id="versionGrid" role="group" aria-label="选择测评长度"><button class="version-card" type="button" data-version="40" aria-pressed="false"><span class="version-check">✓</span><strong>40 题</strong><span>轻松体验 · 约 5 分钟</span></button><button class="version-card selected" type="button" data-version="100" aria-pressed="true"><span class="version-check">✓</span><strong>100 题</strong><span>标准测评 · 约 12 分钟</span></button><button class="version-card" type="button" data-version="200" aria-pressed="false"><span class="version-check">✓</span><strong>200 题</strong><span>深度探索 · 约 25 分钟</span></button></div><button class="primary-btn start-btn" id="startBtn" type="button"><span>开始测试</span><span aria-hidden="true">→</span></button><p class="privacy">无需注册 · 结果仅保存在此设备</p></div>
+      <p class="disclaimer">这是一份自我觉察练习，不是专业心理测评、能力诊断或职业建议。</p>
     </section>
-    <section class="screen quiz-screen" id="testScreen"><div class="quiz-heading"><span class="eyebrow">跟随直觉，选择最像你的答案</span><button class="back-home" id="quizHomeBtn" type="button">退出测试</button></div><div class="progress-row"><div class="progress-track"><div class="progress-bar" id="progressBar"></div></div><div class="progress-text" id="progressText">1 / 100</div></div><span class="question-kicker" id="questionKicker">正在发现你的天赋</span><h2 class="question" id="questionText"></h2><div class="answer-hint">请选择最符合你真实状态的一项</div><div class="options" id="options"></div><div class="test-actions"><button class="secondary-btn" id="prevBtn" type="button">← 上一题</button><button class="primary-btn" id="nextBtn" type="button" disabled>下一题 →</button></div></section>
-    <section class="screen report-screen" id="reportScreen"><div id="reportContent"></div><div class="report-actions"><button class="primary-btn" id="restartBtn" type="button">再测一次</button><button class="secondary-btn" id="reportHistoryBtn" type="button">查看历史</button></div></section>
-    <section class="screen history-screen" id="historyScreen"><div class="history-head"><span class="eyebrow">我的成长轨迹</span><h1>测试历史</h1><p>每一次探索，都是更了解自己的一步。</p></div><div class="history-list" id="historyList"></div><button class="secondary-btn" id="clearHistoryBtn" type="button">清除全部历史</button></section>
+
+    <section class="screen quiz-screen" id="testScreen" aria-labelledby="questionText" aria-live="polite">
+      <div class="quiz-heading"><span class="eyebrow">跟随直觉，选择最像你的答案</span><button class="back-home" id="quizHomeBtn" type="button"><span aria-hidden="true">←</span> 暂存并退出</button></div>
+      <div class="progress-meta"><span id="questionKicker">准备开始</span><strong id="progressText">1 / 40</strong></div><div class="progress-track" role="progressbar" id="progressTrack" aria-label="测评进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progressBar"></span></div>
+      <article class="question-card"><span class="question-mark" aria-hidden="true">Q</span><h1 id="questionText">准备好了吗？</h1><p class="question-hint">请根据大多数时候的真实感受作答。</p><div class="options" id="options" role="group" aria-label="选择一个答案"></div></article>
+      <div class="quiz-footer"><button class="secondary-btn" id="prevBtn" type="button">← 上一题</button><span class="save-hint" id="saveHint">进度自动保存</span><button class="primary-btn next-btn" id="nextBtn" type="button" disabled>下一题 →</button></div>
+      <p class="quiz-tip">没有对错之分 · 选“最像现在的你”即可</p>
+    </section>
+
+    <section class="screen report-screen" id="reportScreen" aria-labelledby="reportTitle"><div id="reportContent"></div><div class="report-actions"><button class="primary-btn" id="restartBtn" type="button">再测一次 <span aria-hidden="true">↻</span></button><button class="secondary-btn" id="shareBtn" type="button">复制结果摘要</button><button class="secondary-btn" id="reportHistoryBtn" type="button">查看测试记录</button></div><p class="copy-feedback" id="copyFeedback" role="status" aria-live="polite"></p></section>
+
+    <section class="screen history-screen" id="historyScreen" aria-labelledby="historyTitle"><div class="history-head"><span class="eyebrow">我的成长轨迹</span><h1 id="historyTitle">测试记录</h1><p>每一次探索，都是更了解自己的一步。</p></div><div class="history-list" id="historyList"></div><div class="history-actions"><button class="secondary-btn" id="historyHomeBtn" type="button">← 返回首页</button><button class="text-btn danger-text" id="clearHistoryBtn" type="button">清空所有记录</button></div><p class="privacy">记录仅储存在当前浏览器中。</p></section>
+    <footer class="app-footer"><span>给探索中的你，一点温柔的提示。</span><span>✦</span></footer>
   </main>
-  <script src="talents.js"></script><script src="app.js"></script><script src="talent-start.js"></script>
+  <script src="talents.js" defer></script><script src="app.js" defer></script>
 </body>
 </html>
