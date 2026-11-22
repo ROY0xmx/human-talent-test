@@ -3,18 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fff8ed">
+  <meta name="theme-color" content="#fffaf4">
   <meta name="description" content="通过轻松友好的自测，发现你的十项天赋与闪光点。">
   <title>人类十大天赋自测</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="icon-refinement.css">
 </head>
 <body>
-  <div class="paper-grain" aria-hidden="true"></div>
   <main class="app">
     <header class="topbar">
       <button class="brand" id="homeBtn" type="button" aria-label="返回首页">
-        <span class="brand-mark" aria-hidden="true">✳</span>
-        <span>天赋小实验室</span>
+        <span class="brand-mark" aria-hidden="true">✳</span><span>天赋小实验室</span>
       </button>
       <nav class="top-actions" aria-label="页面操作">
         <button class="icon-btn" id="historyBtn" type="button">测试记录</button>
@@ -41,6 +40,7 @@
         <article class="talent-tile lime"><span class="tile-icon" aria-hidden="true">♙</span><span>创造</span></article>
         <article class="talent-tile mauve"><span class="tile-icon" aria-hidden="true">●</span><span>美学</span></article>
       </div>
+
       <p class="talent-caption">最后看看你的天赋解析</p>
 
       <div class="home-controls">
@@ -52,6 +52,7 @@
         <div class="start-wrap"><button class="primary-btn start-btn" id="startBtn" type="button"><span>开始测试</span><span aria-hidden="true">→</span></button></div>
         <span class="privacy"><span aria-hidden="true">⌑</span> 测试记录仅保存在此设备</span>
       </div>
+
       <div class="page-dots" aria-hidden="true"><i class="current"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
     </section>
 
@@ -79,8 +80,6 @@
 
   <script src="talents.js"></script>
   <script src="app.js"></script>
-  <script>
-    document.getElementById('quizHomeBtn').addEventListener('click', () => document.getElementById('homeBtn').click());
-  </script>
+  <script>document.getElementById('quizHomeBtn').addEventListener('click',()=>document.getElementById('homeBtn').click());</script>
 </body>
 </html>
